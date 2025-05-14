@@ -1,55 +1,66 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="el">
 <head>
-    <title>Quiz Ενότητα 2</title>
     <meta charset="UTF-8">
+    <title>Quiz Ενότητα 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Quiz Ενότητα 2</h1>
-
-    <form action="/submitQuiz/2" method="post">
+<body class="bg-light">
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Quiz Ενότητα 2</h2>
+    <form action="/submitQuiz/2" method="post" class="bg-white p-4 rounded shadow-sm">
         <p>1. Το κεντρικό μνημείο στον αρχαιολογικό χώρο των Δελφών είναι ο ναός του Απόλλωνα.</p>
         <input type="radio" name="q1" value="true"> Σωστό
         <input type="radio" name="q1" value="false"> Λάθος
+        <br><br>
 
         <p>2. Το κεντρικό μνημείο των Δελφών είναι ο ναός της Δήμητρας.</p>
         <input type="radio" name="q2" value="true"> Σωστό
         <input type="radio" name="q2" value="false"> Λάθος
+        <br><br>
 
         <p>3. Το θέατρο των Δελφών φιλοξενούσε θεατρικές παραστάσεις στην αρχαιότητα.</p>
         <input type="radio" name="q3" value="true"> Σωστό
         <input type="radio" name="q3" value="false"> Λάθος
+        <br><br>
 
         <p>4. Το στάδιο των Δελφών φιλοξενούσε θεατρικές παραστάσεις.</p>
         <input type="radio" name="q4" value="true"> Σωστό
         <input type="radio" name="q4" value="false"> Λάθος
+        <br><br>
 
         <p>5. Το φεστιβάλ που διεξαγόταν στους Δελφούς ήταν τα Πύθια.</p>
         <input type="radio" name="q5" value="true"> Σωστό
         <input type="radio" name="q5" value="false"> Λάθος
+        <br><br>
 
         <p>6. Οι Ολυμπιακοί Αγώνες διοργανώνονταν στον χώρο των Δελφών.</p>
         <input type="radio" name="q6" value="true"> Σωστό
         <input type="radio" name="q6" value="false"> Λάθος
+        <br><br>
 
         <p>7. Στο Μουσείο των Δελφών μπορεί κανείς να δει αρχαία αγάλματα και αντικείμενα.</p>
         <input type="radio" name="q7" value="true"> Σωστό
         <input type="radio" name="q7" value="false"> Λάθος
+        <br><br>
 
         <p>8. Στο Μουσείο των Δελφών εκτίθενται μόνο φωτογραφίες και μοντέρνα τέχνη.</p>
         <input type="radio" name="q8" value="true"> Σωστό
         <input type="radio" name="q8" value="false"> Λάθος
+        <br><br>
 
         <p>9. Το Στάδιο των Δελφών χρησιμοποιούταν για αθλητικούς αγώνες.</p>
         <input type="radio" name="q9" value="true"> Σωστό
         <input type="radio" name="q9" value="false"> Λάθος
+        <br><br>
 
         <p>10. Ο ναός του Απόλλωνα είναι αφιερωμένος στη θεά Αθηνά.</p>
         <input type="radio" name="q10" value="true"> Σωστό
         <input type="radio" name="q10" value="false"> Λάθος
-
         <br><br>
-        <button type="submit">Υποβολή</button>
+
+        <button type="submit" class="btn btn-primary mt-3">Υποβολή</button>
     </form>
+</div>
 </body>
 </html>

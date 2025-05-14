@@ -38,7 +38,7 @@ public class LoginController {
         return "login";
     }
 
-    @GetMapping("/mainmenu")
+    /*@GetMapping("/mainmenu")
     public String showMainMenu(HttpSession session, Model model) {
         String username = (String) session.getAttribute("username");
         if (username == null) {
@@ -46,7 +46,7 @@ public class LoginController {
         }
         model.addAttribute("username", username);
         return "mainmenu";
-    }
+    } */
 
     @GetMapping("/register")
     public String showRegisterForm() {

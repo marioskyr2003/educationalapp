@@ -2,6 +2,9 @@ package com.example.educationalapp.controller;
 
 import com.example.educationalapp.model.QuizResult;
 import com.example.educationalapp.repository.QuizResultRepository;
+
+import jakarta.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,10 +23,16 @@ public class QuizController {
     @PostMapping("/submitQuiz/{unit}")
     public String submitQuiz(
             @PathVariable int unit,
-            @RequestParam String username,
+            HttpSession session,
             @RequestParam Map<String, String> allParams,
             Model model) {
-
+    	String username = (String) session.getAttribute("username");
+    	
+    	   if (username == null) {
+    	        model.addAttribute("message", "Δεν είστε συνδεδεμένος. Παρακαλώ κάντε login πρώτα.");
+    	        return "quizResult";
+    	    }
+    	
         int score = 0;
 
         Map<String, String> correctAnswers = new HashMap<>();
